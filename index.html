@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palitres — Конструктор цветовых палитр</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">palitres</h1>
+            <p class="tagline">Конструктор цветовых палитр</p>
+        </header>
+
+        <!-- Main Controls -->
+        <section class="controls">
+            <div class="control-group">
+                <label for="harmony-select">Гармония:</label>
+                <select id="harmony-select">
+                    <option value="random">Случайная</option>
+                    <option value="complementary">Комплементарная</option>
+                    <option value="analogous">Аналоговая</option>
+                    <option value="triadic">Триадная</option>
+                    <option value="square">Квадратная</option>
+                    <option value="monochromatic">Монохромная</option>
+                    <option value="split-complementary">Разделённо-комплементарная</option>
+                    <option value="tetradic">Тетрадная</option>
+                </select>
+            </div>
+            
+            <button id="generate-btn" class="btn btn-primary">
+                <span class="btn-icon"></span>
+                Сгенерировать
+            </button>
+            
+            <button id="add-color-btn" class="btn btn-secondary">
+                <span class="btn-icon">+</span>
+                Добавить цвет
+            </button>
+        </section>
+
+        <!-- Palette Display -->
+        <section class="palette-section">
+            <div class="palette-header">
+                <h2>Ваша палитра</h2>
+                <input type="text" id="palette-name" class="palette-name-input" placeholder="Название палитры" value="Моя палитра">
+            </div>
+            <div id="palette-container" class="palette-container">
+                <!-- Цвета будут добавлены через JS -->
+            </div>
+        </section>
+
+        <!-- Export/Import Section -->
+        <section class="actions-section">
+            <div class="action-group">
+                <h3>Экспорт</h3>
+                <div class="export-buttons">
+                    <button id="export-json" class="btn btn-export">JSON</button>
+                    <button id="export-css" class="btn btn-export">CSS</button>
+                    <button id="export-figma" class="btn btn-export">Figma</button>
+                </div>
+            </div>
+            
+            <div class="action-group">
+                <h3>Импорт</h3>
+                <div class="import-area">
+                    <input type="file" id="import-file" accept=".json" class="file-input">
+                    <label for="import-file" class="btn btn-import">
+                        <span class="btn-icon"></span>
+                        Загрузить JSON
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saved Palettes -->
+        <section class="saved-section">
+            <h3>Сохранённые палитры</h3>
+            <div id="saved-palettes" class="saved-palettes">
+                <!-- Сохранённые палитры будут добавлены через JS -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for color editing -->
+    <div id="color-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Редактировать цвет</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="color-preview" id="modal-color-preview"></div>
+                <div class="color-inputs">
+                    <div class="input-group">
+                        <label for="modal-hex">HEX:</label>
+                        <input type="text" id="modal-hex" placeholder="#000000">
+                    </div>
+                    <div class="input-group">
+                        <label for="modal-rgb">RGB:</label>
+                        <input type="text" id="modal-rgb" placeholder="rgb(0, 0, 0)">
+                    </div>
+                    <div class="input-group">
+                        <label for="modal-hsl">HSL:</label>
+                        <input type="text" id="modal-hsl" placeholder="hsl(0, 0%, 0%)">
+                    </div>
+                    <div class="input-group">
+                        <label for="modal-name">Название:</label>
+                        <input type="text" id="modal-name" placeholder="Основной цвет">
+                    </div>
+                    <div class="input-group">
+                        <label for="modal-type">Тип:</label>
+                        <select id="modal-type">
+                            <option value="primary">Основной</option>
+                            <option value="secondary">Вторичный</option>
+                            <option value="accent">Акцент</option>
+                            <option value="background">Фон</option>
+                            <option value="text">Текст</option>
+                            <option value="custom">Пользовательский</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-save" class="btn btn-primary">Сохранить</button>
+                <button id="modal-delete" class="btn btn-danger">Удалить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/color.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
