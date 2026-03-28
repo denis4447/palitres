@@ -2,7 +2,7 @@
 
 **Конструктор цветовых палитр с экспортом в JSON, CSS и Figma**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Pages-blue?style=flat-square)]([https://honor.github.io/palitres](https://denis4447.github.io/palitres/))
+[![GitHub](https://img.shields.io/badge/GitHub-Pages-blue?style=flat-square)]([https://denis4447.github.io/palitres](https://denis4447.github.io/palitres/))
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 ---
@@ -30,13 +30,13 @@
 
 ### Онлайн-версия
 
-Откройте приложение на **[GitHub Pages]([https://honor.github.io/palitres](https://denis4447.github.io/palitres/))**
+Откройте приложение на **[GitHub Pages]([https://denis4447.github.io/palitres](https://denis4447.github.io/palitres/))**
 
 ### Локальный запуск
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/honor/palitres.git
+git clone https://github.com/denis4447/palitres.git
 cd palitres
 ```
 
@@ -161,7 +161,7 @@ Pull Request'ы приветствуются! Для серьёзных изме
 
 ## 📬 Контакты
 
-- **GitHub**: [@honor](https://github.com/denis4447)
+- **GitHub**: [@denis4447](https://github.com/denis4447)
 
 ---
 
