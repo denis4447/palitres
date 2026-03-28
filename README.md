@@ -124,12 +124,6 @@ palitres/
 
 ---
 
-## 📸 Скриншоты
-
-![Главный экран](ui_design.jpg)
-
----
-
 ## 🔧 Развёртывание на GitHub Pages
 
 1. Создайте репозиторий на GitHub
@@ -167,13 +161,13 @@ Pull Request'ы приветствуются! Для серьёзных изме
 
 ## 📬 Контакты
 
-- **GitHub**: [@honor](https://github.com/honor)
+- **GitHub**: [@honor](https://github.com/denis4447)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by Honor**
+**Made with ❤️ by denchik**
 
 [⬆️ Вернуться к началу](#-palitres)
 
